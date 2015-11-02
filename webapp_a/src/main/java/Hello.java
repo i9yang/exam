@@ -9,7 +9,7 @@ public class Hello implements SimpleServlet{
 	public void service(HttpRequest req, HttpResponse res){
 		try {
 			Writer writer = res.getWriter();
-			writer.write("hehe a : ");
+			writer.write("Hello a.com : ");
 			writer.write(req.getParameter("name"));
 		}catch(Exception e){
 			e.printStackTrace();

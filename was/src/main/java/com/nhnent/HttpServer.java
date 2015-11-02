@@ -30,6 +30,7 @@ public class HttpServer extends Thread {
 		setting.setPort(new Integer((String) server.get("port")));
 
 		Map<String, VirtualHost> hostMap = setting.getVirtualHostMap();
+		Map<String, ClassLoader> classLoaderMap = setting.getClassLoaderMap();
 
 		JSONObject serverList;
 		JSONObject errorPage;
@@ -43,8 +44,7 @@ public class HttpServer extends Thread {
 			virtual.setErrorPageMap(errorPage);
 
 			hostMap.put((String) serverList.get("name"), virtual);
-
-			ClassUtil.addClass(new File(virtual.getDocument_root()).toURI().toURL());
+			classLoaderMap.put((String) serverList.get("name"), ClassUtil.getClassLoader(new File(virtual.getDocument_root()).toURI().toURL()));
 		}
 	}
 
@@ -54,7 +54,6 @@ public class HttpServer extends Thread {
 			log.info("server started");
 			while (true) {
 				Socket request = server.accept();
-				log.info("remoteSocketAddress : {}", request.getRemoteSocketAddress());
 				Runnable r = new RequestProcessor(setting, request);
 				pool.submit(r);
 			}

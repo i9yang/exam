@@ -9,4 +9,5 @@ import java.util.Map;
 public class Setting {
 	private int port;
 	private Map<String, VirtualHost> virtualHostMap = new HashMap<>();
+	private Map<String, ClassLoader> classLoaderMap = new HashMap<>();
 }

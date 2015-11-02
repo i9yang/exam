@@ -227,3 +227,37 @@
 16:54:32.039 [Thread-0] INFO  com.nhnent.HttpServer _-_ remoteSocketAddress : /127.0.0.1:54614
 16:54:32.075 [Thread-0] INFO  com.nhnent.HttpServer _-_ remoteSocketAddress : /127.0.0.1:54619
 16:54:32.097 [Thread-0] INFO  com.nhnent.HttpServer _-_ remoteSocketAddress : /127.0.0.1:54620
+17:04:35.062 [Thread-0] INFO  com.nhnent.HttpServer _-_ remoteSocketAddress : /127.0.0.1:54796
+17:04:43.109 [Thread-0] INFO  com.nhnent.HttpServer _-_ remoteSocketAddress : /127.0.0.1:54802
+17:05:05.181 [Thread-0] INFO  com.nhnent.HttpServer _-_ remoteSocketAddress : /127.0.0.1:54808
+17:05:26.512 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started
+17:05:46.668 [Thread-0] INFO  com.nhnent.HttpServer _-_ remoteSocketAddress : /127.0.0.1:54832
+17:06:13.027 [Thread-0] INFO  com.nhnent.HttpServer _-_ remoteSocketAddress : /127.0.0.1:54838
+17:14:40.452 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started
+17:14:45.424 [pool-1-thread-1] INFO  com.nhnent.RequestProcessor _-_ a.com / / / null
+17:15:02.530 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started
+17:15:02.600 [pool-1-thread-1] INFO  com.nhnent.RequestProcessor _-_ a.com _ / _ null
+17:15:03.481 [pool-1-thread-2] INFO  com.nhnent.RequestProcessor _-_ a.com _ / _ null
+17:15:05.101 [pool-1-thread-3] INFO  com.nhnent.RequestProcessor _-_ b.com _ / _ null
+17:15:08.506 [pool-1-thread-4] INFO  com.nhnent.RequestProcessor _-_ b.com _ /Hello _ name=haha
+17:15:09.898 [pool-1-thread-5] INFO  com.nhnent.RequestProcessor _-_ a.com _ /Hello _ name=haha
+17:15:14.655 [pool-1-thread-6] INFO  com.nhnent.RequestProcessor _-_ b.com _ /Hello _ name=haha
+17:15:17.142 [pool-1-thread-7] INFO  com.nhnent.RequestProcessor _-_ a.com _ /Hello _ name=haha
+17:15:32.840 [pool-1-thread-8] INFO  com.nhnent.RequestProcessor _-_ b.com _ /Hello _ name=haha
+17:15:57.373 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started
+17:15:59.005 [pool-1-thread-1] INFO  com.nhnent.RequestProcessor _-_ b.com _ /Hello _ name=haha
+17:15:59.838 [pool-1-thread-2] INFO  com.nhnent.RequestProcessor _-_ b.com _ /Hello _ name=haha
+17:16:00.350 [pool-1-thread-3] INFO  com.nhnent.RequestProcessor _-_ b.com _ /Hello _ name=haha
+17:22:19.560 [Thread-0] ERROR com.nhnent.HttpServer _-_ {}
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method) ~[na:1.8.0_31]
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106) ~[na:1.8.0_31]
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:382) ~[na:1.8.0_31]
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190) ~[na:1.8.0_31]
+	at java.net.ServerSocket.bind(ServerSocket.java:375) ~[na:1.8.0_31]
+	at java.net.ServerSocket.<init>(ServerSocket.java:237) ~[na:1.8.0_31]
+	at java.net.ServerSocket.<init>(ServerSocket.java:128) ~[na:1.8.0_31]
+	at com.nhnent.HttpServer.run(HttpServer.java:53) ~[classes/:na]
+17:22:29.183 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started
+17:22:53.335 [pool-1-thread-1] INFO  com.nhnent.RequestProcessor _-_ b.com _ /Hello _ name=haha
+17:23:00.686 [pool-1-thread-2] INFO  com.nhnent.RequestProcessor _-_ a.com _ /Hello _ name=haha

@@ -59,6 +59,7 @@ public class RequestProcessor implements Runnable {
 		VirtualHost virtualHost = setting.getVirtualHostMap().get(domain);
 
 		 try {
+			log.info("{} _ {} _ {}", domain, header.get("path"), header.get("query"));
 			String root = new File(virtualHost.getDocument_root()).getCanonicalPath();
 		    OutputStream raw = new BufferedOutputStream(connection.getOutputStream());
 			Writer out = new OutputStreamWriter(raw);
@@ -89,7 +90,8 @@ public class RequestProcessor implements Runnable {
 				}
 			} else {
 				try {
-					Class clazz = Class.forName(header.get("path").substring(1));
+					ClassLoader cl = setting.getClassLoaderMap().get(domain);
+					Class clazz = cl.loadClass(header.get("path").substring(1));
 					Object obj = clazz.newInstance();
 					SimpleServlet ss;
 					if (obj instanceof SimpleServlet) {
