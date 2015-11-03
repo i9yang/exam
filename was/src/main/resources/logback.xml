@@ -8,10 +8,10 @@
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>log/output.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>logFile.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+			<fileNamePattern>output.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
 		</rollingPolicy>
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} _-_ %msg%n</pattern>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %L - %msg%n</pattern>
 		</encoder>
 	</appender>
 

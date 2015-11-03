@@ -22,6 +22,8 @@ public class HttpServer extends Thread {
 	private final Setting setting;
 
 	public HttpServer() throws Exception {
+		log.info("HttpServer init");
+
 		JSONParser parser = new JSONParser();
 		JSONObject root = (JSONObject) parser.parse(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("config.json")));
 		JSONObject server = (JSONObject) root.get("server");
@@ -44,6 +46,7 @@ public class HttpServer extends Thread {
 			virtual.setErrorPageMap(errorPage);
 
 			hostMap.put((String) serverList.get("name"), virtual);
+			log.debug("add server : {} , document_root : {}", serverList.get("name"), serverList.get("document_root"));
 			classLoaderMap.put((String) serverList.get("name"), ClassUtil.getClassLoader(new File(virtual.getDocument_root()).toURI().toURL()));
 		}
 	}
@@ -51,14 +54,14 @@ public class HttpServer extends Thread {
 	public void run() {
 		ExecutorService pool = Executors.newFixedThreadPool(NUM_THREADS);
 		try (ServerSocket server = new ServerSocket(setting.getPort())) {
-			log.info("server started");
+			log.info("server started port : {}", setting.getPort());
 			while (true) {
 				Socket request = server.accept();
 				Runnable r = new RequestProcessor(setting, request);
 				pool.submit(r);
 			}
 		} catch (Exception e) {
-			log.error("{}", e);
+			log.error("server init error : {}", e);
 		}
 	}
 

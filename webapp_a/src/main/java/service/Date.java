@@ -9,15 +9,11 @@ import java.text.SimpleDateFormat;
 
 public class Date implements SimpleServlet {
 	@Override
-	public void service(HttpRequest req, HttpResponse res){
-		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+	public void service(HttpRequest req, HttpResponse res) throws Exception{
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 
-			Writer writer = res.getWriter();
-			writer.write("Date a.com : ");
-			writer.write(sdf.format(new java.util.Date()));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		Writer writer = res.getWriter();
+		writer.write("Date a.com : ");
+		writer.write(sdf.format(new java.util.Date()));
 	}
 }

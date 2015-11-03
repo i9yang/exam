@@ -493,3 +493,158 @@ java.net.BindException: Address already in use: JVM_Bind
 12:54:40.256 [pool-1-thread-6] INFO  com.nhnent.RequestProcessor _-_ a.com _ /service.Date _ null
 12:54:40.261 [main] DEBUG test.HttpServerTest _-_ Date a.com : 2015-11-03T12:54:40
 12:54:40.261 [main] DEBUG test.HttpServerTest _-_ now : Tue Nov 03 12:54:40 KST 2015, resultDate : Tue Nov 03 12:54:40 KST 2015
+15:13:59.280 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started
+15:16:15.955 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started
+15:16:36.033 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:16:36.036 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:16:36.051 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started
+15:18:01.812 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:18:01.815 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:18:01.831 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:20:27.044 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:20:27.047 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:20:27.063 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:20:42.402 [Thread-0] DEBUG com.nhnent.HttpServer _-_ Socket[addr=/127.0.0.1,port=62804,localport=8080]
+15:20:42.421 [pool-1-thread-1] INFO  com.nhnent.RequestProcessor _-_ a.com _ / _ null
+15:20:45.965 [Thread-0] DEBUG com.nhnent.HttpServer _-_ Socket[addr=/127.0.0.1,port=62810,localport=8080]
+15:20:45.974 [pool-1-thread-2] INFO  com.nhnent.RequestProcessor _-_ b.com _ / _ null
+15:20:46.263 [Thread-0] DEBUG com.nhnent.HttpServer _-_ Socket[addr=/127.0.0.1,port=62815,localport=8080]
+15:20:46.272 [pool-1-thread-3] INFO  com.nhnent.RequestProcessor _-_ b.com _ /favicon.ico _ null
+15:23:02.707 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:23:02.711 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:23:02.726 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:23:14.154 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:23:14.157 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:23:14.172 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:23:15.984 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ GET / HTTP/1.1
+15:23:21.073 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ GET /aaa HTTP/1.1
+15:25:14.176 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:25:14.184 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:25:14.186 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:25:14.200 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:25:18.964 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ b.com / GET /aaa HTTP/1.1
+15:25:21.830 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com / GET /aaa HTTP/1.1
+15:25:26.117 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com / GET /Hello?name=haha HTTP/1.1
+15:25:28.947 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com / GET / HTTP/1.1
+15:25:34.891 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com / GET /service.Hello HTTP/1.1
+15:25:37.633 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com / GET /service.Error HTTP/1.1
+15:26:00.337 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com / GET /service.Date HTTP/1.1
+15:26:05.056 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ b.com / GET /service.Date HTTP/1.1
+15:45:18.873 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:45:18.887 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:45:18.890 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:45:18.897 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:45:18.923 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com : GET /service.Error HTTP/1.1
+15:45:18.952 [main] DEBUG test.HttpServerTest _-_ statusCode : 500, url : http://a.com:8080/service.Error
+15:45:18.960 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com : GET /notFound HTTP/1.1
+15:45:18.963 [main] DEBUG test.HttpServerTest _-_ statusCode : 404, url : http://a.com:8080/notFound
+15:45:18.969 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com : GET /../../../../test HTTP/1.1
+15:45:18.972 [main] DEBUG test.HttpServerTest _-_ statusCode : 403, url : http://a.com:8080/../../../../test
+15:45:18.983 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com : GET / HTTP/1.1
+15:45:18.986 [main] DEBUG test.HttpServerTest _-_ a.com : a.com
+15:45:18.995 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ b.com : GET / HTTP/1.1
+15:45:18.997 [main] DEBUG test.HttpServerTest _-_ b.com : b.com
+15:45:19.008 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com : GET /service.Date HTTP/1.1
+15:45:19.013 [main] DEBUG test.HttpServerTest _-_ Date a.com : 2015-11-03T15:45:19
+15:45:19.014 [main] DEBUG test.HttpServerTest _-_ now : Tue Nov 03 15:45:19 KST 2015, resultDate : Tue Nov 03 15:45:19 KST 2015
+15:53:53.311 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:53:53.323 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:53:53.325 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:53:53.332 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:53:53.351 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com : GET / HTTP/1.1
+15:53:53.363 [main] DEBUG test.HttpServerTest _-_ <html>
+15:53:53.363 [main] DEBUG test.HttpServerTest _-_ <body>
+15:53:53.363 [main] DEBUG test.HttpServerTest _-_ a.com
+15:53:53.364 [main] DEBUG test.HttpServerTest _-_ </body>
+15:53:53.364 [main] DEBUG test.HttpServerTest _-_ </html>
+15:56:18.802 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:56:18.814 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:56:18.816 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:56:18.823 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:56:57.161 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:56:57.172 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:56:57.175 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:56:57.181 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:57:39.426 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:57:39.439 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:57:39.442 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:57:39.449 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:57:39.469 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com : GET / HTTP/1.1
+15:57:39.485 [main] DEBUG test.HttpServerTest _-_ <html>
+15:57:39.486 [main] DEBUG test.HttpServerTest _-_ <body>
+15:57:39.486 [main] DEBUG test.HttpServerTest _-_ a.com
+15:57:39.486 [main] DEBUG test.HttpServerTest _-_ </body>
+15:57:39.486 [main] DEBUG test.HttpServerTest _-_ </html>
+15:58:14.037 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:58:14.050 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:58:14.053 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:58:14.060 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:58:55.052 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:58:55.069 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:58:55.072 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:58:55.080 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:59:16.205 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:59:16.216 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:59:16.218 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:59:16.225 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:59:30.697 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+15:59:30.711 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+15:59:30.715 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+15:59:30.721 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+15:59:52.933 [Thread-0] INFO  com.nhnent.RequestProcessor _-_ a.com : POST / HTTP/1.1
+16:01:31.128 [main] INFO  com.nhnent.HttpServer _-_ HttpServer init
+16:01:31.140 [main] DEBUG com.nhnent.HttpServer _-_ add server : a.com , document_root : webapp_a/target/classes
+16:01:31.142 [main] DEBUG com.nhnent.HttpServer _-_ add server : b.com , document_root : webapp_b/target/classes
+16:01:31.149 [Thread-0] INFO  com.nhnent.HttpServer _-_ server started port : 8080
+16:24:53.191 [main] INFO  com.nhnent.HttpServer - 25 - HttpServer init
+16:24:53.202 [main] DEBUG com.nhnent.HttpServer - 49 - add server : a.com , document_root : webapp_a/target/classes
+16:24:53.204 [main] DEBUG com.nhnent.HttpServer - 49 - add server : b.com , document_root : webapp_b/target/classes
+16:24:53.211 [Thread-0] INFO  com.nhnent.HttpServer - 57 - server started port : 8080
+16:24:53.232 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET / HTTP/1.1
+16:24:53.243 [main] DEBUG test.HttpServerTest - 49 - a.com : a.com
+16:24:53.251 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - b.com : GET / HTTP/1.1
+16:24:53.253 [main] DEBUG test.HttpServerTest - 49 - b.com : b.com
+16:24:53.264 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET /service.Date HTTP/1.1
+16:24:53.269 [main] DEBUG test.HttpServerTest - 82 - Date a.com : 2015-11-03T16:24:53
+16:24:53.270 [main] DEBUG test.HttpServerTest - 86 - now : Tue Nov 03 16:24:53 KST 2015, resultDate : Tue Nov 03 16:24:53 KST 2015
+16:24:53.284 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET /service.Error HTTP/1.1
+16:24:53.289 [pool-1-thread-4] ERROR com.nhnent.RequestProcessor - 114 - {}
+java.lang.RuntimeException: error
+	at service.Error.service(Error.java:10) ~[na:na]
+	at com.nhnent.RequestProcessor.run(RequestProcessor.java:92) ~[classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_31]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+16:24:53.290 [main] DEBUG test.HttpServerTest - 67 - statusCode : 500, url : http://a.com:8080/service.Error
+16:24:53.300 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET /notFound HTTP/1.1
+16:24:53.302 [main] DEBUG test.HttpServerTest - 67 - statusCode : 404, url : http://a.com:8080/notFound
+16:24:53.311 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET /../../../../test HTTP/1.1
+16:24:53.314 [main] DEBUG test.HttpServerTest - 67 - statusCode : 403, url : http://a.com:8080/../../../../test
+16:28:13.663 [main] INFO  com.nhnent.HttpServer - 25 - HttpServer init
+16:28:13.676 [main] DEBUG com.nhnent.HttpServer - 49 - add server : a.com , document_root : webapp_a/target/classes
+16:28:13.679 [main] DEBUG com.nhnent.HttpServer - 49 - add server : b.com , document_root : webapp_b/target/classes
+16:28:13.685 [Thread-0] INFO  com.nhnent.HttpServer - 57 - server started port : 8080
+16:28:13.706 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET / HTTP/1.1
+16:28:13.720 [main] DEBUG test.HttpServerTest - 49 - a.com : a.com
+16:28:13.728 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - b.com : GET / HTTP/1.1
+16:28:13.730 [main] DEBUG test.HttpServerTest - 49 - b.com : b.com
+16:28:13.740 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET /service.Date HTTP/1.1
+16:28:13.746 [main] DEBUG test.HttpServerTest - 82 - Date a.com : 2015-11-03T16:28:13
+16:28:13.746 [main] DEBUG test.HttpServerTest - 86 - now : Tue Nov 03 16:28:13 KST 2015, resultDate : Tue Nov 03 16:28:13 KST 2015
+16:28:13.761 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET /service.Error HTTP/1.1
+16:28:13.768 [pool-1-thread-4] ERROR com.nhnent.RequestProcessor - 114 - 
+java.lang.RuntimeException: error
+	at service.Error.service(Error.java:10) ~[na:na]
+	at com.nhnent.RequestProcessor.run(RequestProcessor.java:92) ~[classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_31]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+16:28:13.770 [main] DEBUG test.HttpServerTest - 67 - statusCode : 500, url : http://a.com:8080/service.Error
+16:28:13.782 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET /notFound HTTP/1.1
+16:28:13.784 [main] DEBUG test.HttpServerTest - 67 - statusCode : 404, url : http://a.com:8080/notFound
+16:28:13.792 [Thread-0] INFO  com.nhnent.RequestProcessor - 52 - a.com : GET /../../../../test HTTP/1.1
+16:28:13.795 [main] DEBUG test.HttpServerTest - 67 - statusCode : 403, url : http://a.com:8080/../../../../test

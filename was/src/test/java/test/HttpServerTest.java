@@ -8,6 +8,8 @@ import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
@@ -23,7 +25,7 @@ import static org.junit.Assert.assertTrue;
 @Slf4j
 public class HttpServerTest {
 	/**
-	 * TODO: maven test 시에만 테스트 실패.... 원인규명해야함..
+	 * FIXME: maven test 시에만 테스트 실패.... 원인규명해야함..
 	 */
 	@BeforeClass
 	public static void init() {

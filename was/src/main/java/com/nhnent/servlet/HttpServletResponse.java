@@ -12,12 +12,4 @@ public class HttpServletResponse implements HttpResponse{
 	public Writer getWriter(){
 		return out;
 	}
-
-	public void write(String str){
-		try {
-			out.write(str);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
 }
