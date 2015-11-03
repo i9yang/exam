@@ -38,12 +38,28 @@
         <processorPath useClasspath="true" />
         <module name="webaap_b" />
       </profile>
+      <profile default="false" name="Annotation profile for webapp_a" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="webapp_a" />
+      </profile>
+      <profile default="false" name="Annotation profile for webapp_b" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="webapp_b" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="exam" target="1.8" />
       <module name="was" target="1.8" />
       <module name="webaap_b" target="1.8" />
       <module name="webapp" target="1.8" />
+      <module name="webapp_a" target="1.8" />
+      <module name="webapp_b" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
